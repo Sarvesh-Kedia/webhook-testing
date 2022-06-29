@@ -20,6 +20,7 @@ app.post("/hook", (req, res) => {
 })
 
 app.get("/", (req, res) => {
+    res.send("welcome to home page");
     console.log("welcome to home page");
     res.status(200).end()
 })
