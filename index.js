@@ -19,6 +19,10 @@ app.post("/hook", (req, res) => {
     res.status(200).end() // Responding is important
 })
 
+app.get("/", (req, res) => {
+    console.log("welcome to home page");
+    res.status(200).end()
+})
 
 // Start express on the defined port
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`))
