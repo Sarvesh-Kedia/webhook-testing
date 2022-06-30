@@ -9,7 +9,7 @@ const bodyParser = require("body-parser")
 
 // Initialize express and define a port
 const app = express()
-const PORT = 3000
+const port = process.env.PORT || 8080;
 
 
 // Tell express to use body-parser's JSON parsing
@@ -34,4 +34,6 @@ app.get("/test", (req, res) => {
 })
 
 // Start express on the defined port
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`))
+app.listen(port, () => {
+  console.log('Express server listening on port ', port)
+});
