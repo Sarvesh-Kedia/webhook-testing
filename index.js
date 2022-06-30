@@ -17,13 +17,15 @@ app.use(bodyParser.json())
 
 
 app.post("/hook", (req, res) => {
-    console.log(req.body) // Call your action on the request here
+    console.log(req.query) // Call your action on the request here
+    res.json({"message": "everything okay"})
     res.status(200).end() // Responding is important
 })
 
 app.get("/", (req, res) => {
     res.send("welcome to home page");
     console.log("welcome to home page logged in console");
+
     res.status(200).end()
 })
 
