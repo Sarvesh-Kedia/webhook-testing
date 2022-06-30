@@ -23,7 +23,13 @@ app.post("/hook", (req, res) => {
 
 app.get("/", (req, res) => {
     res.send("welcome to home page");
-    console.log("welcome to home page");
+    console.log("welcome to home page logged in console");
+    res.status(200).end()
+})
+
+app.get("/test", (req, res) => {
+    res.send("this is a test message");
+    console.log("test message logged in console");
     res.status(200).end()
 })
 
